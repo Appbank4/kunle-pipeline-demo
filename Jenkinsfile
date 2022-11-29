@@ -29,5 +29,10 @@ pipeline{
 					
                 }
             }
+			stage('6-security check'){
+				steps{
+					sh 'bash -x /var/lib/jenkins/workspace/practical-groovy/security.sh'
+				}
+			}
 		}
 }
