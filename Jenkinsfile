@@ -26,6 +26,8 @@ pipeline{
             stage('5-you have arrived'){
                 steps{
                     sh 'logname'
+					sh 'mkdir adekunle'
+					sh 'cat /etc/os-release'
                 }
             }
 		}
