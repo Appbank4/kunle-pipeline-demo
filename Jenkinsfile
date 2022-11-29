@@ -23,5 +23,10 @@ pipeline{
 					sh 'lscpu'
 				}
 			}
+            stage('5-you have arrived'){
+                steps{
+                    sh 'logname'
+                }
+            }
 		}
 }
