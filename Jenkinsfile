@@ -1,9 +1,9 @@
 pipeline{
 	agent any
 		stages{
-			stage('1-make left on blue line'){
+			stage('1-make RepoClone'){
 				steps{
-					sh 'pwd'
+					checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Appbank4/kunle-pipeline-demo.git']]])
 				}
 			}
 			stage('2-make right on a yellow line'){
