@@ -15,6 +15,7 @@ pipeline{
 			stage('3-make left turn on adjercent line'){
 				steps{
 					sh 'free -g'
+                    sh 'free -m'
 				}
 			}
 			stage('4-crossover the pedenstrian bridge to opposite side'){
